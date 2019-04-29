@@ -18,4 +18,8 @@ int mandelbrot_iters_to_escape(LDComplex c, int escape_threshold) {
     }
     return iters;
 }
+
+sf::Color palette(int iters, int threshold) {
+    return sf::Color::Black;
+}
 }

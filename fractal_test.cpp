@@ -19,3 +19,7 @@ TEST_CASE("Escape time is calculated correctly.", "[mandelbrot]") {
     REQUIRE(fractal::mandelbrot_iters_to_escape(10il, 500) == 0);
     REQUIRE(fractal::mandelbrot_iters_to_escape(0il, 500) == 500);
 }
+
+TEST_CASE("Color palette generation works." "[palette]") {
+    REQUIRE(fractal::palette(0, 500) == sf::Color::Black);
+}
