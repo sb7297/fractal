@@ -13,9 +13,9 @@ target_compile_options(fractal PRIVATE
                            $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
                                 -std=c++14>
                            $<$<CXX_COMPILER_ID:MSVC>:
-                                >)
+                                /std:c++14>)
 target_compile_options(catch PRIVATE
                            $<$<OR:$<CXX_COMPILER_ID:Clang>,$<CXX_COMPILER_ID:AppleClang>,$<CXX_COMPILER_ID:GNU>>:
                                 -Wall -std=c++14>
                            $<$<CXX_COMPILER_ID:MSVC>:
-                                /W4>)
+                                /W4 /std:c++14>)
