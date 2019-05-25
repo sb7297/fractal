@@ -27,5 +27,5 @@ TEST_CASE("Hue generation works.", "[palette] [hue]") {
 }
 
 TEST_CASE("Color palette generation works." "[palette]") {
-    REQUIRE(fractal::palette(0, 500) == sf::Color::Black);
+    REQUIRE(fractal::generate_palette(0, 500) == sf::Color::Black);
 }

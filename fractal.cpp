@@ -1,5 +1,6 @@
 #include <cmath>
 #include <algorithm>
+#include <vector>
 #include "fractal.hpp"
 
 namespace fractal {
@@ -58,7 +59,9 @@ sf::Color hue2rgb(int degrees) {
     return sf::Color(ired, igreen, iblue, 255);
 }
 
-sf::Color palette(int iters, int threshold) {
+sf::Color generate_palette(int iters, int threshold) {
+    std::vector<sf::Color> palette;
+    palette.reserve(threshold);
     if (iters == threshold) {
         return sf::Color::White;
     }
