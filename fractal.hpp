@@ -7,9 +7,9 @@
 namespace fractal {
 typedef std::complex<long double> LDComplex;
 
-LDComplex mandelbrot_step(LDComplex z_n, LDComplex c); 
+LDComplex mandelbrot_step(const LDComplex& z_n, const LDComplex& c); 
 
-int mandelbrot_iters_to_escape(LDComplex c, int escape_threshold);
+int mandelbrot_iters_to_escape(const LDComplex& c, int escape_threshold);
 
 sf::Color generate_palette(int iters, int threshold);
 
